@@ -18,9 +18,9 @@ angular.module('myApp')
       };
 
       $scope.delete = function(id){
-        var r = confirm('Are you sure?');
+        var confirmed = confirm('Are you sure?');
 
-        if(r){
+        if(confirmed){
           DataService.delete(id, function(data){
             if(data.code == 1){
               alert('deleted');
